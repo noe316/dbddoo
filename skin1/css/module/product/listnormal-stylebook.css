@@ -1,0 +1,67 @@
+/* 공통 */
+.xans-product-listnormal { margin:20px 0 0; clear:both;   }
+.xans-product-listnormal h2 { margin:0 0 16px; font-weight:normal; font-size:14px; color:#2e2e2e; text-align:center; margin-bottom:20px; display:inline-block; padding:10px 50px; zoom:1; *display:inline; }
+.xans-product-listnormal img { vertical-align:middle; }
+.xans-product-listnormal ul.prdList { display:table; width:100%; margin:-20px 0 0; font-size:0; line-height:0;        margin-left: 0px; }
+.xans-product-listnormal ul.prdList li {position:relative;}
+.xans-product-listnormal ul.prdList li.item { display:inline-block;    color:#757575; vertical-align:top; *display:inline; *zoom:1; }
+.xans-product-listnormal ul.prdList li.item .box { margin:0 auto; font-size:12px; line-height:18px; text-align:center; }
+.xans-product-listnormal ul.prdList li.item .box img {width:100%;}
+.xans-product-listnormal ul.prdList li.item .box:hover { opacity:0.5;  } 
+.xans-product-listnormal ul.prdList li .color { overflow:hidden; display:inline-block; margin:3px 0 0 0; }
+.xans-product-listnormal ul.prdList.column3 li .color { width:176px; }
+.xans-product-listnormal ul.prdList.column4 li .color { width:24%; }
+.xans-product-listnormal ul.prdList.column5 li .color { width:76px; }
+.xans-product-listnormal ul.prdList li .chips { float:left; width:10px; height:10px; margin:0 2px 2px 0; border:1px solid #e3e3e3; font-size:0; line-height:0; }
+
+.xans-product-listnormal ul.prdList .thumb {  width:100%;}
+.xans-product-listnormal ul.prdList .name {    margin-top: 148px; }
+.xans-product-listnormal ul.prdList .name a { color:#2e2e2; }
+.xans-product-listnormal ul.prdList .name .title { font-weight:normal; }
+.xans-product-listnormal ul.prdList .status { margin:0 0 16px; padding:0 80px 4px 0; border-bottom:1px solid #e8e8e8; text-align:right; line-height:0; *zoom:1; }
+.xans-product-listnormal ul.prdList .status:after { content:""; display:block; clear:both; }
+.xans-product-listnormal ul.prdList .icon { float:left; text-align:left; }
+.xans-product-listnormal ul.prdList .icon img { margin:0 -3px 6px 0; }
+.xans-product-listnormal ul.prdList .button { margin:0 -80px 0 0; *zoom:1; }
+.xans-product-listnormal ul.prdList .button img { margin:0 0 6px -3px; cursor:pointer; }
+.xans-product-listnormal ul.prdList .button .option { display:inline; position:relative; *zoom:1; }
+.xans-product-listnormal ul.prdList .mileage { display:block; }
+.xans-product-listnormal ul.prdList span.grid { display:block; }
+
+.xans-product-listnormal .box_info {opacity:0; position:absolute;     position: absolute;  top: 0;  padding: 0 20px; height: 370px;  width: 329px;  background: rgba(0,0,0,0.3); }
+.xans-product-listnormal ul.prdList li:hover .box_info {opacity:1; -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;}
+.xans-product-listnormal .box_info a {color:#fff !important;}
+
+
+/* 진열방식 */
+.xans-product-listnormal ul.column3 li.item { width:31.3333%; padding:5px; }
+.xans-product-listnormal ul.column3 li.item .box {  }
+
+.xans-product-listnormal ul.column4 li.item { width:24%;  padding:5px; }
+.xans-product-listnormal ul.column4 li.item .box { width:100%; }
+.xans-product-listnormal ul.column4 li.item .thumb { max-width:100%; }
+
+.xans-product-listnormal ul.column5 li.item { width:18.6%;  padding:10px; }
+.xans-product-listnormal ul.column5 li.item .box {    }
+.xans-product-listnormal ul.column5 li.item .thumb { }
+
+/* module="product_ListItem" */
+.xans-product-listnormal .xans-product-listitem { margin:0; }
+.xans-product-listnormal .xans-product-listitem li .title { font-weight:normal; vertical-align:top; }
+.xans-product-listnormal .xans-product-listitem li .title span { vertical-align:top; }
+
+/* 할인기간 레이어 */
+.xans-product-listnormal .discountPeriod { display:inline-block; z-index:10; position:relative; width:55px; height:19px; vertical-align:middle; *zoom:1; *display:inline; }
+.xans-product-listnormal .discountPeriod .edge { position:absolute; left:50%; top:-6px; width:10px; height:6px; margin:0 0 0 -5px; font-size:0; line-height:0; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/common/ico_tip_edge.gif") no-repeat 0 0; }
+.xans-product-listnormal .layerDiscountPeriod { display:none; position:absolute; left:50%; top:26px; width:247px; margin:0 0 0 -124px; border:1px solid #565960; font-size:12px; background-color:#fff; }
+.xans-product-listnormal .layerDiscountPeriod strong.title { display:block; margin:0 0 12px; padding:0 35px 0 0; font-weight:bold; color:#2e2e2e; }
+.xans-product-listnormal .layerDiscountPeriod .content { padding:9px 10px 12px 14px; font-family:Verdana, "돋움", Dotum, sans-serif; }
+.xans-product-listnormal .layerDiscountPeriod .content p { margin:2px 0 0; font-size:11px; color:#000; line-height:16px; color:#757575; letter-spacing:-1px; }
+.xans-product-listnormal .layerDiscountPeriod .content p strong { font-weight:normal; font-size:12px; color:#2e2e2e; }
+.xans-product-listnormal .layerDiscountPeriod .content p strong span { font-size:11px; }
+.xans-product-listnormal .layerDiscountPeriod .close { position:absolute; right:14px; top:14px; }
+.xans-product-listnormal .layerDiscountPeriod .close img { cursor:pointer; }

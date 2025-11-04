@@ -1,0 +1,177 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+
+
+<div module="Product_menupackage">
+    <!--@css(/css/module/product/menupackage.css)-->
+    <!--@js(/js/module/product/menucategory.js)-->
+    <div class="path" module="product_headcategory">
+        <span>현재 위치</span>
+        <ol>
+            <li><a href="/">홈</a></li>
+            <li class="{$disp_cate_1|display}"><a href="{$link_product_list_1}">{$name_1}</a></li>
+            <li class="{$disp_cate_2|display}"><a href="{$link_product_list_2}">{$name_2}</a></li>
+            <li class="{$disp_cate_3|display}"><a href="{$link_product_list_3}">{$name_3}</a></li>
+            <li class="{$disp_cate_4|display}"><strong><a href="{$link_product_list_4}">{$name_4}</a></strong></li>
+        </ol>
+    </div>
+
+    <div class="title" module="product_headcategory">
+        <p class="banner">{$top_image1_tag}{$top_image2_tag}{$top_image3_tag}</p>
+        <h2><span>{$title_text_or_image}</span></h2>
+        <span class="likeButton {$disp_likecate_class}"><button type="button">{$disp_likecate_icon}<strong>{$disp_likecate_count}</strong></button></span>
+    </div>
+
+    <ul class="menuCategory">
+        <li module="product_displaycategory" style="display:{$display};" class="{$selected}">
+            <a href="{$link_product_list_sub}">{$category_name} <span class="count {$product_count_display|display}">({$product_count})</span></a>
+            <ul module="product_children">
+                <li class="{$selected}">
+                    <a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a>
+                    <div class="button">
+                        {$children_icon}
+                        <ul module="product_children" class="subCategory">
+                            <li class="{$selected}"><a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                            <li class="{$selected}"><a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="{$selected}">
+                    <a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a>
+                    <div class="button">
+                        {$children_icon}
+                        <ul module="product_children" class="subCategory">
+                            <li class="{$selected}"><a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                            <li class="{$selected}"><a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+
+<!--리스트 토글모드-->
+<!--@css(/zen/toggle_list/toggle_list1.css)-->
+<!--@js(/zen/toggle_list/toggle_list.js)-->
+<!--@import(/zen/toggle_list/toggle_list.html)-->
+
+
+<!--@css(/css/module/product/listnormal.css)-->
+<div module="product_normalmenu">
+    <!--
+        $compare_page = /product/compare.html
+    -->    
+    <p class="compare {$product_compare_display|display}"><a href="#none" onclick="{$product_compare_action}"><img src="http://img.echosting.cafe24.com/design/skin/default/product/btn_compare.gif" alt="상품비교" /></a></p>
+    <ul id="type">
+        <li><a href="{$param_3}" {$style_3}>LOW</a></li>
+        <li><a href="{$param_4}" {$style_4}>HIGH</a></li>
+        <li><a href="{$param_1}" {$style_1}>NAME</a></li>
+       <!--  <li><a href="{$param_2}" {$style_2}>MADE</a></li> -->
+        <li><a href="{$param_5}" {$style_5}>NEW ITEM</a></li>
+        <li class="{$favor_sort_display|display}"><a href="{$param_6}" {$style_6}>BEST ITEM</a></li>    
+    </ul>
+    <p class="prdCount">TOTAL <strong>{$total_count}</strong> ITEMS</p>    
+</div>
+
+
+
+
+<!--@css(/zen/css/mediaquery_itemlist.css)-->
+<!--@css(/zen/css/itemlist02.css)-->
+<!--@js(/zen/js/item_rollover.js)-->
+
+
+
+<!-- 일반상품 -->    
+<div module="product_listnormal" class="itemlist">
+        <!--
+        $count = 100
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+        -->    
+    <ul class="prdList">  
+   
+        <li class="item" id="anchorBoxId_{$product_no}" >   
+            <div class="box" > 
+     
+              <span class="toggle_img"> <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"> {$color}   </a> </span>   
+                <!--@import(/product/like_button.html)-->
+              
+                <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_big}"  id="{$image_medium_id}" alt="{$seo_alt_tag}" class="thumb" /></a>
+                
+                
+               <div class="box1" >
+                   
+      		<div class="description">
+						
+						<div class="name"><a href="{$link_product_detail}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></div>
+						<ul module="product_ListItem" class="spec">
+							<li class="{$item_display|display}" rel="{$item_title|striptag}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+							<li class="{$item_display|display}" rel="{$item_title|striptag}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+						</ul>
+						<div class="icon">
+							<div class="promotion">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons}</div>
+							<div class="button">
+							   <div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon} <strong>{$disp_likeprd_count}</strong></button></div>
+							   <div class="option">{$option_preview_icon}</div>
+						   </div>
+						</div>
+
+                	</div>
+
+                
+                </div> 
+            </div>        
+        </li>
+         
+       <li class="item" id="anchorBoxId_{$product_no}" >   
+            <div class="box">       
+              <span class="toggle_img"> <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"> {$color}   </a> </span>   
+                <!--@import(/product/like_button.html)-->
+                <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}"><img src="{$image_big}"  id="{$image_medium_id}" alt="{$seo_alt_tag}" class="thumb" /></a>
+                
+               <div class="box1" >
+                   
+              <div class="description">
+					
+						<div class="name"><a href="{$link_product_detail}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></div>
+						<ul module="product_ListItem" class="spec">
+							<li class="{$item_display|display}" rel="{$item_title|striptag}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+							<li class="{$item_display|display}" rel="{$item_title|striptag}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+						</ul>
+						<div class="icon">
+							<div class="promotion">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons}</div>
+							<div class="button">
+							   <div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon} <strong>{$disp_likeprd_count}</strong></button></div>
+							   <div class="option">{$option_preview_icon}</div>
+						   </div>
+						</div>
+             
+                	</div>
+         
+                </div> 
+            </div>   
+        </li>
+    </ul>    
+</div>
+
+
+
+
+<div module="product_normalpaging" class="ec-base-paginate">
+    <a href="{$param_first}" class="first"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_first.gif" alt="첫 페이지" /></a>
+    <a href="{$param_before}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a>
+    <ol>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    </ol>
+    <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지" /></a>
+    <a href="{$param_last}" class="last"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_last.gif" alt="마지막 페이지" /></a>
+</div>
+

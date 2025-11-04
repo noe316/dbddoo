@@ -1,0 +1,94 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+
+<!--
+    $category_page = /product/list.html
+    $project_page = /product/project.html
+    $jointbuy_page = /product/jointbuy.html
+-->
+
+
+<div module="product_detail">
+    <!--@css(/css/module/product/detail2.css)-->
+    <!--
+		$coupon_download_page = /coupon/coupon_productdetail.html
+    -->
+    
+    <div class="detailArea1">
+        <div class="imgArea1" module="product_image">
+            <!--@js(/js/module/product/product_image.js)-->
+           <!--  <div class="keyImg">
+                <div class="thumbnail">
+                  <img src="{$big_img}" alt="{$seo_alt_tag}" class="{$big_img_class} {$img_display|display}" />
+                    <span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span>
+                </div>
+            </div> -->
+         </div>
+    </div>
+<div style="clear:both;"></div>    
+    <div class="headingArea1">
+        <h2>{$name}</h2>
+    </div>
+
+  </div>
+
+<br><br>
+
+<div module="product_additional">
+    <!--@css(/css/module/product/additional.css)-->
+    <div id="prdDetail" class="ec-base-tab">
+
+        <div class="cont">
+            {$product_detail}
+        </div>
+    </div><!-- //prdDetail -->
+
+  <div module="product_relation" id="prdRelated" class="ec-base-product ec-base-tab">
+      	
+
+      
+    <!--@css(/css/module/product/relation.css)-->
+	<div class="cboth detail_title">RELATION PRODUCT</div>
+	<div class="relation">
+		<div module="product_relationlist">
+			<ul class="prdList grid4">
+				
+                <li>
+					<div class="box">
+					<div class="thumbnail"><a href="{$link_product_detail}"><img src="{$img_medium}" alt="{$seo_alt_tag}" class="thumb" /></a></div>
+					<div class="description">
+						<div class="name"><a href="{$link_product_detail}">{$name}</a></div>
+						<ul class="spec">
+							<li><strong class="{$product_sale_strike}">{$disp_product_price}{$product_tax_type_text}</strong></li>
+							<li class="salePrice {$sale_price_display|display}">{$disp_sale_price}</li>
+						</ul>
+					</div>
+					</div>
+				</li>
+				
+                <li>
+					<div class="box">
+					<div class="thumbnail"><a href="{$link_product_detail}"><img src="{$img_medium}" alt="{$seo_alt_tag}" class="thumb" /></a></div>
+					<div class="description">
+						<div class="name"><a href="{$link_product_detail}">{$name}</a></div>
+						<ul class="spec">
+							<li><strong class="{$product_sale_strike}">{$disp_product_price}{$product_tax_type_text}</strong></li>
+							<li class="salePrice {$sale_price_display|display}">{$disp_sale_price}</li>
+						</ul>
+					</div>
+					</div>
+				</li>
+                
+			</ul>
+		</div>
+    </div>
+</div>
+
+   
+
+
+
+</div><!-- //product_additional -->
+
+
+<!--@define(cmc_log)-->

@@ -1,0 +1,93 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+
+
+      
+<div module="Product_menupackage">
+    <!--@css(/css/module/product/menupackage.css)-->
+    <!--@js(/js/module/product/menucategory.js)-->
+
+
+    <div class="title" module="product_headcategory">
+        <p class="banner">{$top_image1_tag}{$top_image2_tag}{$top_image3_tag}</p>
+        <h2><span>{$title_text_or_image}</span></h2>
+        <span class="likeButton {$disp_likecate_class}"><button type="button">{$disp_likecate_icon}<strong>{$disp_likecate_count}</strong></button></span>
+    </div>
+
+    <ul class="menuCategory">
+
+        <li module="product_displaycategory" style="display:{$display};" class="{$selected}">
+            <a href="/product/lookbook_list.html?{$param_cate_no}">{$category_name} <span class="count {$product_count_display|display}">({$product_count})</span></a>
+            <ul module="product_children">
+                <li class="{$selected}">
+                  <a href="/product/lookbook_list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a>
+                    <div class="button">
+                        {$children_icon}
+                        <ul module="product_children" class="subCategory">
+                            <li><a href="/product/lookbook_list.html?{$param_cate_no}" >{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                            <li><a href="/product/lookbook_list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="{$selected}">
+                    <a href="/product/lookbook_list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a>
+                    <div class="button">
+                        {$children_icon}
+                        <ul module="product_children" class="subCategory">
+                            <li><a href="/product/lookbook_list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                            <li><a href="/product/lookbook_list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+<head>
+  <style>
+     .lightbox{top:7% !important; position: fixed  !important;}
+  </style>
+ <!--@css(/zen/css/lightbox.css)-->
+</head>
+
+<BR> 
+<div module="product_listnormal">
+<!--@css(/css/module/product/listnormal-stylebook.css)-->
+<!--
+$count = 20
+-->
+ <ul class="prdList column4">
+      
+            <li class="item" id="anchorBoxId_{$product_no}">
+                 <div class="box">    
+                     <a class="example-image-link" href="{$image_tiny}" data-lightbox="example-1"><img class="example-image" src="{$image_medium}" alt="image-1" /></a>
+                 </div>
+            </li>
+            <li class="item" id="anchorBoxId_{$product_no}">
+                 <div class="box">    
+                     <a class="example-image-link" href="{$image_tiny}" data-lightbox="example-1"><img class="example-image" src="{$image_medium}" alt="image-1" /></a>
+                 </div>
+            </li>
+     </ul>
+</div>
+    
+
+<div module="product_normalpaging" class="ec-base-paginate"   >
+   <a href="{$param_first}" class="first"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_first.gif" alt="첫 페이지" /></a> 
+  <a href="{$param_before}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a>
+    <ol>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    </ol>
+    <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지" /></a>
+     <a href="{$param_last}" class="last"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_last.gif" alt="마지막 페이지" /></a>
+</div>
+
+  <script src="/web/upload/new/js/lightbox-plus-jquery.min.js"></script>
+
+

@@ -1,0 +1,23 @@
+.xans-product-normalmenu { overflow:hidden; margin:0px auto 30px; border:0px solid #fff; width:100%; }
+.xans-product-normalmenu fieldset { float:left; margin:0 5px 0 0; }
+.xans-product-normalmenu p.prdCount { padding:3px 9px 0 0px;  font-size:11px; color:#000; }
+.xans-product-normalmenu p.prdCount strong {color:#000; font-weight:bold;}
+.xans-product-normalmenu ul#type { float:right; padding:2px 0 0;  color:#000; }
+.xans-product-normalmenu ul#type li { display:inline; padding:0 0 0 10px; margin:0 0px 0 0; font-size:11px; letter-spacing: 0.5px;  }
+.xans-product-normalmenu ul#type li:first-child { background:none; }
+.xans-product-normalmenu ul#type li a {   color:#000; }
+.xans-product-normalmenu .compare { float:right; padding:0 0 0 3px; }
+
+
+
+/* 할인기간 레이어 */
+.xans-product-listnormal .discountPeriod { display:inline-block; z-index:10; position:relative; width:55px; height:19px; vertical-align:middle; *zoom:1; *display:inline; }
+.xans-product-listnormal .discountPeriod .edge { position:absolute; left:14px; top:-6px; width:9px; height:6px; font-size:0; line-height:0; background:url("http://img.echosting.cafe24.com/design/skin/default/common/bg_edge.gif") no-repeat 0 0; }
+.xans-product-listnormal .layerDiscountPeriod { display:none; position:absolute; left:0; top:27px; width:313px; border:1px solid #6f94bf; font-size:12px; background-color:#fff; border-radius:3px; }
+.xans-product-listnormal .layerDiscountPeriod strong.title { display:block; margin:0 0 8px; padding:0 35px 0 0; font-weight:bold; color:#010101; }
+.xans-product-listnormal .layerDiscountPeriod .content { padding:11px 19px 15px; }
+.xans-product-listnormal .layerDiscountPeriod .content p { color:#fff; line-height:16px; }
+.xans-product-listnormal .layerDiscountPeriod .content p strong { color:#fff; font-weight:bold; }
+.xans-product-listnormal .layerDiscountPeriod .content p strong span { font-size:11px; }
+.xans-product-listnormal .layerDiscountPeriod .close { position:absolute; right:12px; top:11px; }
+.xans-product-listnormal .layerDiscountPeriod .close img { cursor:pointer; }

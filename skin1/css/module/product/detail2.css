@@ -1,0 +1,55 @@
+.xans-product-detail { position:relative; margin:0 auto 0; padding:50px 0 0 0;  max-width:1200px; text-align:center; }
+.xans-product-detail .detailArea1 { padding:0 0 0 0px; margin:0 auto 0; text-align:center;  }
+.xans-product-detail .detailArea1:after { content:""; display:block; clear:both; }
+
+/* headingArea */
+.xans-product-detail .headingArea1 { position:relative; padding:0 0 10px; margin:20px 0 15px; line-height:24px; }
+.xans-product-detail .headingArea1 h2 { display:inline; font-size:24px; color:#2e2e2e; }
+.xans-product-detail .headingArea1 .icon img { margin:0 4px 0 0; vertical-align:middle; }
+.xans-product-detail .headingArea1 .icon .icon_img { margin:0; }
+.xans-product-detail .headingArea1 .supply { overflow:hidden; float:right; }
+.xans-product-detail .headingArea1 .supply span { padding:0 3px 0 0; font-size:16px; font-weight:bold; color:#555; }
+
+/* imgArea */
+.xans-product-detail .imgArea1 {  margin:0 auto 0;  max-width:400px; text-align:center }
+.xans-product-detail .imgArea1 .keyImg { width:346px; margin:0 auto; }
+.xans-product-detail .imgArea1 .keyImg .thumbnail { display:inline-block; position:relative; max-width:100%; }
+.xans-product-detail .imgArea1 .keyImg .prdIcon { position:absolute; top:0; left:0; width:100%; height:100%; background-repeat:no-repeat; }
+.xans-product-detail .imgArea1 .keyImg img { max-width:100%;  cursor:pointer; }
+
+
+
+/* infoArea */
+.xans-product-detail .infoArea p.delivery { padding:10px 0 20px; }
+.xans-product-detail .infoArea .guideArea { overflow:hidden; margin:5px 0 0; padding:8px 11px 0; border-top:1px solid #e8e8e8; }
+.xans-product-detail .infoArea .guideArea .info { float:left; color:#757575; }
+.xans-product-detail .infoArea .guideArea .sizeGuide { float:right; background:url("//img.echosting.cafe24.com/skin/base_ko_KR/product/ico_sizeGuide.gif") no-repeat 0 3px; }
+.xans-product-detail .infoArea .sizeGuide a { display:inline-block; padding:2px 15px 2px 24px; color:#353535; vertical-align:top; background:url("//img.echosting.cafe24.com/skin/base_ko_KR/product/ico_sizeGuide_go.gif") no-repeat 100% 6px; }
+.xans-product-detail .infoArea .sizeGuide a:hover { text-decoration:none; }
+
+
+/* 상품 미리보기 이미지 */
+#image_zoom_small { display:block; position:absolute; z-index:999; background:#fff; outline:2px solid #aaa; filter:alpha(opacity=50); opacity:0.5; }
+#zoom_wrap { position:absolute; top:0; left:103%; z-index:100; display:block;}
+.image_zoom_large { position:absolute; z-index:99; width:500px; height:500px; overflow:hidden; background:#fff; outline:1px solid #ececec; }
+.image_zoom_large .image_zoom_large_relative { position:relative; display:block; }
+.image_zoom_large .image_zoom_large_relative img#zoom_image { position:absolute; z-index:99; max-width:none; }
+
+
+#divNvPointInfo { display:none; position:absolute; z-index:99; width:245px; padding:10px; color:#777; background:#fff; border:1px solid #5B9761; }
+#divNvPointInfo a { display:block; padding:5px 0 0; color:#1ec228; }
+#divNvPointInfo a img { vertical-align:middle; }
+#imgNaverMileageHelp { cursor:pointer; }
+
+
+
+/* SNS 상품 홍보 */
+.xans-product-customsns,
+.xans-product-customsns ul,
+.xans-product-customsns li { display:inline-block; vertical-align:middle; }
+.xans-product-customsns img { margin-bottom:2px; }
+
+
+
+
+

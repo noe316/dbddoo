@@ -1,0 +1,51 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">HOME</a></li>
+        <li title="현재 위치"><strong>ABOUT US</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2>ABOUT US</h2>
+</div>
+
+
+<style>
+
+  #aboutwrap{   width:100%; margin:0px auto 0;  }
+  #aboutbox_a{   height:50px;  }
+  #aboutbox_b{  height:100%;    width:50%; float:left;  }
+  #aboutbox_b img {  max-width:100%; }  
+  #aboutbox_c{   width:50%; float:right;  }
+  #aboutbox_c h1 { height:30px; line-height:30px;  font-size:26px; letter-spacing: 1px; padding:50px 0px 10px 40px;  font-weight:bold; }      
+  #aboutbox_c h2 { height:30px; line-height:30px;  font-size:16px; letter-spacing: 1px; padding:0px 0px 30px 40px;  font-weight:bold; }  
+  #aboutbox_c h3 {   font-size:12px; letter-spacing: 0px; padding:0px 0px 0px 40px;  margin:0px auto 30px;  font-weight:400;   }    
+  #aboutbox_c p { height:20px; line-height:20px;  font-size:14px;  padding:0px 0px 0px 40px; font-weight:400; } 
+  #aboutmap { padding:0px 0px 20px 40px; margin:20px auto 0;   }  
+    
+  @media screen and (max-width:1200px){   #aboutbox_b {float:none; width:auto;}  #aboutbox_c {float:none; width:auto;}  
+    }
+ </style>
+
+ <div id="aboutwrap">
+  <div id="aboutbox_a"> </div>
+  <div id="aboutbox_b"> 
+      <!-- 대표이미지 저장 이름은 aboutusimg.jpg  -->
+      <img src="/web/upload/new/aboutusimg.jpg">
+</div>
+  <div id="aboutbox_c"> 
+      <!-- 블랙 글씨만 변경을 해서 사용을 하세요 -->
+      <h1> BRAND STORY</h1>
+      <h2>브랜드 소개</h2>
+      <h3> We aim to be the most personal luxury shopping experience in the world – whether you join us online, 
+          in store, via our app or at our pioneering retail and broadcasting destination, 5 Carlos Place. This five-storey Mayfair residence offers two retail floors, 
+          two floors of private shopping suites and the attic space, 
+          our broadcasting hub where our rich cultural programme will be communicated digitally to our global customers. </h3>
+   <div style="clear:both;"></div>    
+
+  </div>
+ </div>
+
+<div style="clear:both;"></div> 

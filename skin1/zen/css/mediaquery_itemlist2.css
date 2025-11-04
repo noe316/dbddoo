@@ -1,0 +1,47 @@
+@media all and (min-width: 320px) {
+  /* 1 columns */
+  .itemlist ul.prdList li.item {
+     width: 43%;  margin:1%  ;
+  }
+}
+@media all and (min-width: 600px) {
+  /* 1 columns */
+  .itemlist ul.prdList li.item {
+      width: 43%;  margin:1%  ;
+  }
+}
+@media all and (min-width: 900px) {
+  /* 2 columns */
+  .itemlist ul.prdList li.item {
+     width: 32%; margin:1%  ;
+  }
+}
+@media all and (min-width: 1200px) { 
+  /* 3 columns */
+  .itemlist ul.prdList li.item {  
+   width: 23%; margin: 1%  ;;
+  }
+}
+   /* 4 columns */
+@media all and (min-width: 1500px) {
+
+  .itemlist ul.prdList li.item {
+  width: 23%; margin: 1%  ;
+  }
+}
+
+/* 5 columns  */
+@media all and (min-width: 1800px) {
+
+  .itemlist ul.prdList li.item {
+    width: 23%; margin: 1%  ;;
+  }
+}
+
+/* 6 columns  */
+@media all and (min-width: 2100px) {
+   
+  .itemlist ul.prdList li.item {
+    width: 23%; margin: 1%  ;
+  }
+}

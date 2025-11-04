@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/* Layout */
+
+/* 맨 위로 버튼 */
+.wrap_default #on_top {display:block;position:fixed ;right:45px; bottom:80px;   z-index:101}
+
+
+#wrapleft { float:left;   max-width:130px; margin:-30px 0 0 60px; padding:0px 0px 0 20px; height:100%;  position:fixed; z-index:100000!important;   }
+#wrapleft :after { content:""; display:block; clear:both; }
+#wrapleft .menu_item{ padding: 0px 0 0 0;  top:0  height:100%;  }
+
+#wrapright { position:absolute;  float:left;  top:0; right:0; width:15%;  max-width:80px;   padding:40px 40px 0 0px; margin:0px auto 0;   position:fixed;  z-index:100000!important;}
+#wrapright:after { content:""; display:block; clear:both; }
+
+
+/* 메뉴 버튼 */
+
+#accordionbottom {	list-style: none;	padding: 0px 0 100px 0;	bottom:0; position:absolute; z-index:100000!important;  font-weight:normal!important;  font-weight:400;   /*width: 170px;*/}
+#accordionbottom li{	display:inline-block; 	 font-size:10px;  height:18px; line-height:18px;  font-weight:normal!important;   letter-spacing:0.5px;	cursor: pointer;	padding: 0px 10px 0 0px;	list-style: circle;   }
+#accordionbottom li:hover {  color:#999;  font-size: 11px;}
+#accordionbottom a {	 font-size: 11px; }
+#accordionbottom a:hover {	font-size: 11px;  color:#999!important;   }
+#accordionbottom img:hover {opacity: .5;}
+
+
+/*로그인메뉴*/
+#accordion .login_menu {line-height:20px;  font-size:10px; color:#000; letter-spacing:1px;  text-align:right;  text-transform:uppercase;  font-weight:400;  padding: 0px 0 0px 0px;  }
+#accordion .login_menu a {display:inline-block;}
+#accordion .login_menu a:hover {	text-decoration:none;  color:#999; }
+#accordion .login_menu:nth-child(4) {margin-bottom:20px;}
+
+
+
+#mainheader {  position:absolute; width:100%; margin:50px 20px 0 0px;  z-index:100; padding:0px 0px 0 0px;  right: 40px;  }
+
+
+#header { position:absolute;  width:100%; margin:0px auto 0;   height:50px;  z-index:100; top:0;  }
+#header:before { position:absolute; top:35px; left:0; content:""; width:100%; height:0;  }
+#header:after { position:absolute; bottom:45px; left:0; content:""; width:100%; height:0;  }
+#header .inner { position:relative;  width:100%; margin:0 auto; *zoom:1; }
+#header .inner:after { content:""; display:block; clear:both; }
+#header .headerbax-right { float:right;  text-align:right;  width:40%; padding:55px 65px 0 0; } 
+
+
+#wrap { position:relative; width:100%; margin:0 auto; padding:0;  }
+
+#container { width:100%; margin:0 auto; *zoom:1;   }
+#container:after { content:""; display:block; clear:both; }
+
+#mainsidebar { float:left; width:200px;  height: 100vh; top:0; position:fixed; z-index:99; padding:50px 0px 0 50px;    }
+
+#sidebar { float:left; width:150px;  height: 100vh;  top:0; position:fixed; z-index:99; padding:40px 0px 0 50px;    }
+#sidebar .banner { padding:0 0 20px; border-bottom:1px solid #e8e8e8; }
+#sidebar .banner p a { display:block; position:relative; height:20px; margin:0 0 0 10px; padding:10px 0 10px 25px; font-size:13px; font-weight:bold; line-height:20px; }
+#sidebar .banner [class*="Banner"]:before {  position:absolute; top:11px; left:0;  content:""; display:block; width:20px; height:20px; background:url("//img.echosting.cafe24.com/skin/base/layout/sfix_sidebar_banner.png") no-repeat; }
+#sidebar .banner p a.giftBanner:before { background-position:0 0; }
+#sidebar .banner p a.opdiaryBanner:before { background-position:-50px 0; }
+#sidebar .banner p a.sosBanner:before { background-position:-100px 0; }
+#sidebar .banner p a.attendBanner:before { background-position:0 -50px; }
+#sidebar .banner p a.couponzoneBanner:before { background-position:-50px -50px; }
+#sidebar .banner p a.calendarBanner:before { background-position:-100px -50px; }
+#sidebar .banner [class*="Banner"]:hover { text-decoration:none; }
+
+#contents {  max-width:100%; margin:0px auto 50px;   padding:130px 100px 0 250px;    }
+#contents .visual img { max-width:100%; }
+#banner { position:absolute; top:0; left:0; width:90px; }
+#quick { position:absolute; top:0; right:0; width:90px; }
+#quick .banner a { display:block; margin:15px 0 0; }
+
+
+#footer {  width:100%; font-family:Arial, malgun gothic, 맑은고딕, NanumGothic, 돋움;  font-size:10px; letter-spacing:1pt; line-height:14px; text-align:center; color:#999; margin:0 auto;  margin-top:20px;}
+#footer:after {content:""; display:block; clear:both; }
+#footer .footer {  width:100%; margin:0 auto; border-top:1px solid  #e8e8e8; padding:20px 0 20px;}
+#footer .footer a {color:#999;}
+#footer .footer:after {content:""; display:block; clear:both; } 
+#footer .footer .left {float:left;  padding:0px 0 0 0px; }
+#footer .footer .left li {display:inline-block; *display:inline; *zoom:1; vertical-align:top; padding-right:40px; text-align:left;}
+#footer .footer .left li.last {padding-right:0px;}
+#footer .footer .right {float:right; text-align:right; vertical-align:top; padding:0px 0px 0 0;}
+
+/* Main */
+#boardArea { overflow:hidden; margin:50px 0 0;  }
+#bannerArea { margin:22px 0 0; }
+#bannerArea h2 { margin:0 0 16px; font-weight:normal; font-size:20px; color:#2e2e2e; text-align:center; }
+
+/* 탐색경로바 */
+.path { overflow:hidden; height:30px; line-height:30px; *zoom:1; font-size:10px; display:none;	 }
+.path span { overflow:hidden; position:absolute; width:0; height:0; white-space:nowrap; text-indent:100%; }
+.path ol { float:right; }
+.path li { float:left; padding:0 0 0 12px; margin:0 0 0 8px; color:#757575; background:url("//img.echosting.cafe24.com/skin/base/layout/ico_path.gif") no-repeat 0 10px; }
+.path li:first-child { background:none; }
+.path li a { color:#757575; }
+.path li strong,
+.path li strong a { color:#2e2e2e; }
+
+/* 타이틀 */
+.titleArea { min-height:30px; margin:0px 0 20px; }
+.titleArea h2 { display:inline-block; color:#2e2e2e; font-size:14px; *display:inline; font-family: 'Oswald', sans-serif; letter-spacing:1px;  }
+.titleArea p { display:inline-block; position:relative; margin:0 0 0 6px; padding:0 0 0 10px; color:#939393; *display:inline; }
+.titleArea p:before { display:inline-block; position:absolute; top:0; left:0; content:""; width:1px; height:13px; border-left:1px solid #d9d9d9; }
+.titleArea ul { padding:5px 0; color:#939393; line-height:18px; }
+.titleArea ul li { position:relative; padding:0 0 0 9px; }
+.titleArea ul li:before { display:block; position: absolute; top:50%; left:0; content:""; width:2px; height:2px; margin:-2px 0 0 0; background:#939393; }
+
+/* 게시판 메인 */
+.boardMain { overflow:hidden; *zoom:1; }
+.boardMain td img { vertical-align:middle; margin:1px; }
+.boardMain .board { position:relative; margin:0 0 65px; }
+.boardMain .leftArea { float:left; width:50%; }
+.boardMain .leftArea .board { margin:0 23px 65px 0; }
+.boardMain .rightArea { float:right; width:50%; }
+.boardMain .rightArea .board { margin:0 0 65px 23px; }
+.boardMain .board h3 { margin:0 0 13px; height:28px; font-size:16px; color:#2e2e2e; border-bottom:2px solid #626672; }
+.boardMain .board .btnLink { position:absolute; top:3px; right:0; }
+.boardMain .board .ec-base-table.typeList td { color:#a4a4a4; }
+.boardMain .board .ec-base-table.typeList td.title a,
+.boardMain .board .ec-base-table.typeList td.title a:hover { color:#4f4f4f; }
+.boardMain .board .galleryList { overflow:hidden; }
+.boardMain .board .galleryList ul { overflow:hidden; margin:0 -10px; }
+.boardMain .board .galleryList li { float:left; position:relative; width:20%; padding:0 0 12px 0; word-break:break-all; }
+.boardMain .board .galleryList li span { display:block; margin:0 10px; font-size:11px; color:#a4a4a4; }
+.boardMain .board .galleryList li .imgLink,
+.boardMain .board .galleryList li .imgLink:hover { display:block; margin:0 10px 5px; font-size:12px; }
+.boardMain .board .galleryList li .imgLink img { width:100%; max-height:110px; border:1px solid #ededed; }
+
+/* 퀵뷰 모달 */
+#modalBackpanel { display:none; position:absolute; top:0; left:0; z-index:10000; width:100%; height:100%; background:#000; }
+#modalContainer { display:none; position:absolute; top:100px; left:100px; z-index:10001; width:975px; height:720px; border:1px solid #333; background:#fff; }
+#modalContainer #modalContent { width:100%; height:100%; }

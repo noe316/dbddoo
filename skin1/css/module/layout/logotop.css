@@ -1,0 +1,4 @@
+.xans-layout-logotop { max-width:100%;  padding:0px 0px 50px 0px;  text-align:left;  }
+.xans-layout-logotop a { font-size:20px; color:#000;  font-weight:bold; text-decoration:none;  font-family: 'Oswald', sans-serif;   letter-spacing:1px; }
+/*로고 사이즈 변경 하는 방법   max-height:80px;  높이 숫자만 변경을 해주세요 */
+.xans-layout-logotop img {  max-height:80px; }

@@ -1,0 +1,21 @@
+<div id="header">
+    <div  class="headerbax-right" >
+    <div module="Layout_statelogoff">
+        <!--@css(/css/module/layout/statelogoff.css)-->
+        <a href="/member/login.html" class="log">  LOGIN</a>
+        <a href="/member/join.html"> JOIN</a>
+        <a href="/myshop/index.html">  MY SHOP</a>
+         <a href="/myshop/order/list.html"> ORDER</a>
+        <a href="/order/basket.html">  CART <span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
+    </div>
+
+    <div module="Layout_stateLogon">
+        <!--@css(/css/module/layout/statelogon.css)-->
+        <a href="{$action_logout}" class="log"> LOGOUT</a>
+        <span class="myinfo"> <a href="/member/modify.html">JOIN US</a></span>
+        <a href="/myshop/index.html"> MY SHOP</a>
+         <a href="/myshop/order/list.html"> ORDER</a>
+        <a href="/order/basket.html">  CART <span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a> 
+    </div>
+</div>
+</div>

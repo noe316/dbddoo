@@ -1,0 +1,66 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<div class="path" module="product_headcategory">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">HOME</a></li>
+        <li class="{$disp_cate_1|display}"><a href="/product/list.html{$param_1}">{$name_1}</a></li>
+        <li class="{$disp_cate_2|display}"><a href="/product/list.html{$param_2}">{$name_2}</a></li>
+        <li class="{$disp_cate_3|display}"><a href="/product/list.html{$param_3}">{$name_3}</a></li>
+        <li class="{$disp_cate_4|display}"><strong><a href="/product/list.html{$param_4}">{$name_4}</a></strong></li>
+    </ol>    
+</div>
+
+
+<div module="Product_menupackage">
+    <!--@css(/css/module/product/menupackage.css)-->
+    <p class="banner" module="product_headcategory">{$top_image_tag}</p>
+    <div class="title" module="product_headcategory"><h2><span>{$title_text_or_image}</span></h2></div>
+</div>
+
+
+<!--@css(/zen/css/itemlist_lookbook.css)-->
+<!--@js(/zen/js/item_rollover.js)-->
+<!--@css(/zen/css/mediaquery_itemlist2.css)-->
+
+
+<link rel="stylesheet" type="text/css" href="/web/upload/new/zen/mosen/gridload/css/default.cssx" />
+<link rel="stylesheet" type="text/css" href="/web/upload/new/zen/mosen/gridload/css/component.css" />
+<script src="/web/upload/new/zen/mosen/gridload/js/modernizr.custom.js"></script>
+
+
+<!-- 일반상품 -->
+
+<div module="product_listnormal" class="itemlist" style="margin-top:30px;" >
+        <!--
+        $count = 300
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+        -->
+    <ul class="grid effect-2 prdList column2" id="grid">
+        <li class="item">
+            <div class="box"> <a href="/product/campain_detail.html{$param}" ><img src="{$image_medium}" alt="" class="thumb" /></a> </div>
+             <p class="name"><a href="/product/campain_detail.html{$param}" >{$product_name}</a></p>
+            <p class="simple">{$simple_desc}</p> 
+        </li>
+        <li class="item">
+              <div class="box"> <a href="/product/campain_detail.html{$param}" ><img src="{$image_medium}" alt="" class="thumb" /></a> </div>
+      <p class="name"><a href="/product/campain_detail.html{$param}" >{$product_name}</a></p>
+            <p class="simple">{$simple_desc}</p> 
+        </li>
+    </ul>  
+</div>
+
+
+        <script src="/web/upload/new/zen/mosen/gridload/js/masonry.pkgd.min.js"></script>
+		<script src="/web/upload/new/zen/mosen/gridload/js/imagesloaded.js"></script>
+		<script src="/web/upload/new/zen/mosen/gridload/js/classie.js"></script>
+
+		<script src="/web/upload/new/zen/mosen/gridload/js/AnimOnScroll.js"></script>
+		<script>
+			new AnimOnScroll( document.getElementById( 'grid' ), {
+				minDuration : 0.4,
+				maxDuration : 0.7,
+				viewportFactor : 0.2
+			} );
+		</script>

@@ -1,0 +1,11 @@
+.xans-layout-statelogoff {float:right;  padding:0px 30px 0px 0px; margin:0px 0px 0 0px;   letter-spacing:0.5px; font-family:"Spoqa Han Sans",sans-serif !important; }
+.xans-layout-statelogoff > a { padding:0 4px 0 10px; color:#000; font-size:11px;  }
+.xans-layout-statelogoff > a:hover {	 color:#999;  }
+.xans-layout-statelogoff .log { background:none; }
+.xans-layout-statelogoff .log a:hover {	 color:#999;  }
+.xans-layout-statelogoff > a .count,
+.xans-layout-statelogoff > a .count span { position:relative; display:inline-block; background:url("//img.echosting.cafe24.com/skin/base/layout/bg_basket_count.png") no-repeat; }
+.xans-layout-statelogoff > a .count { left:-5px; top:-1px; margin:0 -5px 0 3px; padding:0 0 0 7px; vertical-align:middle; background-position:0 0; }
+.xans-layout-statelogoff > a .count span { height:14px; padding:1px 7px 1px 0; font-weight:bold; color:#fff; font-size:11px; line-height:14px; vertical-align:top; background-position:right -26px; }
+
+.xans-layout-statelogoff .topicon { margin:-5px 0px 0 0px; } 

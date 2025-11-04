@@ -1,0 +1,63 @@
+<!--@css(/zen/css/style02.css)-->
+
+          
+<!-- 메인 텍스트 내용 검정글씨만 수정해주세요-->
+<!-- <div id="section1_title01" class="text">WOMEN'S FINE JEWELRY</div>
+<div id="section1_title02" class="text"><strong>JEWELRY</strong>_SHOP</div>
+<div id="section1_title03" class="text">
+  MADE DESING BY KOREA
+</div> -->
+
+<div id="section1_title04" class="text">  </div>        
+
+
+<!--[if IE]>
+<script type="text/javascript">
+var console = { log: function() {} };
+</script>
+<![endif]-->
+
+
+<script type="text/javascript" src="/web/upload/new/mosen/scroll_layout02/vendors/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="/web/upload/new/mosen/scroll_layout02/jquery.fullPage.js"></script>
+
+<div id="fullpage">
+    <!-- 이미지 사이즈는 가로 2400 * 세로 1200 픽셀로 제작 후 FTP web/upload/new 폴더에 같은 이름으로 제작 후 올려주세요  배경이미지 저장 이름은 / banner_1.jpg, banner_2.jpg, banner_3.jpg, banner_4.jpg -->
+    <!-- 이건 변경을 하지 마세요 -->
+
+    <!-- 첫번쨰 롤링 배너 --> <!-- 링크 주소 : href="원하는 링크주소를 변경을 해주세요"  --> 
+    <div class="section" id="section1" style="background-image:url('/web/upload/new/banner_1.jpg');" >
+    <a href="/product/list.html?cate_no=25" ><img src="https://baboinjune.cafe24.com/web/upload/new/main-top.png" id="sectionbg" ></a>
+    </div>
+    <!-- 두번쨰 롤링 배너 --> <!-- 링크 주소 : href="원하는 링크주소를 변경을 해주세요"  --> 
+    <div class="section" id="section2" style="background-image:url('/web/upload/new/banner_2.jpg');" >  
+    <a href="/product/list.html?cate_no=26" ><img src="https://baboinjune.cafe24.com/web/upload/new/home-03.jpg" id="sectionbg" ></a>
+    </div>
+    
+    <!-- 세번쨰 롤링 배너 -->    <!-- 링크 주소 : href="원하는 링크주소를 변경을 해주세요"  --> 
+    <div class="section" id="section3" style="background-image:url('/web/upload/new/banner_3.jpg');" >  
+    <a href="/product/list.html?cate_no=25" ><img src="https://baboinjune.cafe24.com/web/upload/new/home-04.jpg" id="sectionbg" ></a>
+    </div>
+    
+    <div id="bottom_dp" class="section fp-auto-height mainbottom"> <!-- 하단정보 --> <!--@import(/zen/layout/footer.html)-->  </div>
+    
+</div>
+
+<script type="text/javascript">
+    $('#section1_title01').delay(900).fadeIn(1000);
+    $('#section1_title02').delay(1200).fadeIn(800);
+    $('#section1_title03').delay(1500).fadeIn(800);
+    $('#section1_title04').delay(1800).fadeIn(800);
+</script>
+<script type="text/javascript">
+    $('#fullpage').fullpage({
+        anchors: ['01','02','03','04','05','06'],
+		navigation: true,
+		navigationPosition: 'right',
+		navigationTooltips: [''],
+        fitToSectionDelay: 0,
+        scrollingSpeed: 400,
+	});
+</script>
+
+

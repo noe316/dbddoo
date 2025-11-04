@@ -1,0 +1,30 @@
+/* 공통 */
+.itemlist { margin:0px auto 50px;overflow:hidden;}
+.itemlist img { vertical-align:middle; }
+.itemlist ul.prdList { display:table;  margin:0px auto ; font-size:0; line-height:0;  text-align:left;width:100%;}
+.itemlist ul.prdList li.item { position:relative;display:inline-block; vertical-align:top; border:0px solid #000;}
+.itemlist ul.prdList li.item .toggle_img {position:absolute;left:0%;top:0%;width:100%;display:none;overflow:hidden;}
+.itemlist ul.prdList li.item .toggle_info {position:absolute;left:0px;bottom:0px;width:90%;display:none;padding:10px 5%;background:rgba(255,255,255,0.7);}
+
+.itemlist ul.prdList li.item div.box {  font-size:11px; line-height:1.8em; text-align:center;}
+.itemlist ul.prdList li .mileage { display:block; }
+.itemlist span.grid { display:block; }
+
+.itemlist ul.prdList li .box { position:relative;width:100%;overflow:hidden;border: 0px solid #ececec;margin-bottom:10px;box-sizing: border-box;-webkit-transition: 0.1s ease-in-out;-moz-transition: 0.1s ease-in-out;-o-transition: 0.1s ease-in-out;transition: 0.1s ease-in-out;}
+.itemlist ul.prdList li .box:hover img {-webkit-transition: all 0.1s ease-in;-webkit-transform: scale(1.1);-ms-transition: all 0.1s ease-in;-ms-transform: scale(1.1);-moz-transition: all 0.1s ease-in;-moz-transform: scale(1.1);transition: all 0.1s ease-in;transform: scale(1.1);}
+
+.itemlist ul.prdList li.item .thumb {width: 100%;}
+.itemlist ul.prdList .name { position:relative; padding:10px 0px 10px 0;text-align:left;font-size:13px;font-weight:500;}
+.itemlist ul.prdList .custom { padding:0px 0px 0px 0;text-align:left;font-size:11px;line-height:18px;font-weight:400;text-decoration:line-through;color:#aaa;}
+.itemlist ul.prdList .price { padding:0px 0px 0px 0;text-align:left;font-size:11px;line-height:18px;font-weight:700;}
+.itemlist ul.prdList .simple { padding:10px 0px 0px 0;text-align:left;margin:0 auto 0px;font-size:11px;line-height:18px;color:#999;}
+
+/* 진열방식 */
+.itemlist ul.prdList > li.column1 { width:98%; margin:0 1% 2%  ; }
+.itemlist ul.prdList > li.column2 { width:48%; margin:0 1% 2%  ; }
+.itemlist ul.prdList > li.column3 { width:31.333%; margin:0 1% 1%  ; }
+.itemlist ul.prdList > li.column4 { width:23%;margin:0 1% 2%  ; }
+.itemlist ul.prdList > li.column5 { width:18%;margin:0 1% 2%;}
+
+
+

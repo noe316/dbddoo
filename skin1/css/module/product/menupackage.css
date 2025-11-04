@@ -1,0 +1,31 @@
+
+/* 분류페이지 타이틀 */
+.xans-product-menupackage .title {text-align:left;margin: -10px auto 20px;}
+.xans-product-menupackage .title h2 {font-size:18px; color:#000;line-height:30px;font-weight:700;letter-spacing:1px; font-family: 'Oswald', sans-serif; }
+.xans-product-menupackage .title .banner { margin:0 0 10px; }
+.xans-product-menupackage .title .likeButton {height:25px;}
+.xans-product-menupackage .title .likeButton button {padding:0;margin:0;}
+.xans-product-menupackage .title .likeButton button img {vertical-align:middle;}
+
+.xans-product-menupackage .menuCategory { margin:0 auto 20px; text-align:left; overflow:hidden;  padding:10px 0px ; font-family: 'Oswald', sans-serif;  }
+.xans-product-menupackage .menuCategory > li { display:inline-block; vertical-align:top; *display:inline; *margin:0; *zoom:1; line-height:16px;}
+
+.xans-product-menupackage .menuCategory a  {font-weight:normal;font-size:14px;padding:0 20px 0 0px;border-left:1px solid #eee; margin:0 0px 0 0px; }
+.xans-product-menupackage .menuCategory > li > a:hover { color:#999; }
+.xans-product-menupackage .menuCategory > li .count { padding:0 3px; color:#999; }
+.xans-product-menupackage .menuCategory > li > ul { padding:7px 0 0 5px; display:none;}
+.xans-product-menupackage .menuCategory > li > ul > li { margin:5px 0 0 0; padding:0 0 0 8px; line-height:14px; }
+.xans-product-menupackage .menuCategory > li > ul > li img { margin:0 0 0 -6px; vertical-align:middle; }
+.xans-product-menupackage .menuCategory > li > ul > li > a { padding:0 4px 0 4px;color:#000; letter-spacing:0px; *padding-left:0; }
+.xans-product-menupackage .menuCategory > li > ul > li > a:hover { color:#999; text-decoration:none; }
+.xans-product-menupackage .menuCategory > li > ul > li > .button { display:inline-block; position:relative; width:9px; height:9px; margin:0 0 0 -1px; vertical-align:middle; *display:inline; *vertical-align:4px; *zoom:1; }
+.xans-product-menupackage .menuCategory > li > ul > li > .button > img { margin:0; vertical-align:top; }
+
+.xans-product-menupackage .subCategory { display:none; position:absolute; left:0; top:0; z-index:10;  padding:12px 10px 16px 19px; background:#f8f8f8; border:1px solid #c1c1c1; }
+.xans-product-menupackage .subCategory img { margin:0 0 0 -4px; vertical-align:middle; }
+.xans-product-menupackage .subCategory li { margin:5px 0 0 0; line-height:14px; }
+.xans-product-menupackage .subCategory li a { padding:0 0 0 3px; font-size:11px; color:#000; letter-spacing:-1px; *padding-left:0; }
+.xans-product-menupackage .subCategory li a:hover { color:#999; text-decoration:none; }
+.xans-product-menupackage .menuCategory .button.selected { z-index:10; }
+.xans-product-menupackage .menuCategory .button.selected .subCategory { display:block; }
+

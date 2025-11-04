@@ -1,0 +1,77 @@
+
+/*최상단 좌측메뉴*/
+#left {display:none;   left:0px; top:0px;z-index:999; width:100%; background:rgba(255,255,255,0);padding:30px;
+    -webkit-transition-property: background-color, opacity;
+    -webkit-transition-duration:0.5s;
+    -webkit-transition-timing-function: ease;
+    -ms-transition-property:  background-color, opacity;
+    -ms-transition-duration:0.5s;
+    -ms-transition-timing-function: ease;
+    -ms-transition-property:  background-color, opacity;
+    -ms-transition-duration:0.5s;
+    -ms-transition-timing-function: ease;
+    -o-transition-property: background-color, opacity;
+    -o-transition-duration:0.5s;
+    -o-transition-timing-function: ease;
+    transition-property: background-color, opacity;
+    transition-duration:0.5s;
+    transition-timing-function: ease;
+}
+#left:hover {background:rgba(255,255,255,0.8);}
+#left.fade {opacity:0.3;}
+
+
+
+
+/* 좌측메뉴*/
+#left_menu { margin:0px auto 20px;    }
+#left_menu ul { font-size:0; line-height:0;}
+#left_menu li { position:relative; z-index:10;  }
+#left_menu > li {  font-weight:normal!important;  }
+#left_menu li a { display:block; color:#000;  line-height:20px; font-size:12px;  }
+#left_menu li a:hover {color:#777;}
+
+#left_menu .h1 { font-size:12px!important; font-weight:normal!important; line-height:22px!important; } 
+#left_menu .h2 { font-size:15px!important; letter-spacing:1px!important;  font-weight:normal!important; line-height:24px!important; font-family: 'Oswald', sans-serif; } 
+
+
+/*로그인메뉴*/
+#left_menu .login_menu { letter-spacing:1px;  line-height:22px; font-size:12px;  color:#000;   text-transform:uppercase;width:100%;font-weight:400;}
+#left_menu .login_menu a {display:inline-block;}
+#left_menu .login_menu:nth-child(4) {margin-bottom:20px;}
+
+/*콜센터메뉴*/
+#left_menu .cs_center  { letter-spacing:1px; line-height:20px; font-size:12px;   color:#000;  font-weight:400;}
+#left_menu .cs_box li  {margin:10px auto 20px;font-weight:400; color:#000;    line-height:20px; font-size:12px;  }
+#left_menu .cs_box span {font-size:12px; letter-spacing:0.2px; font-weight:normal; }
+
+/*은행정보메뉴*/
+#left_menu .bank_box li  {margin:10px auto 20px;font-weight:400;  color:#000;  letter-spacing:1px;  line-height:20px; font-size:12px;  }
+#left_menu .bank_box span {display:inline-block;  letter-spacing:1px;  line-height:20px; font-size:12px; font-weight:normal;}
+#left_menu .bank_box .name {margin-top:7px;}
+
+
+/* 글로벌 메뉴*/
+#left_menu .global_btn { margin:10px auto 0px;}
+#left_menu .global_btn ul {display:block;}
+#left_menu .global_btn li img {height:12px;margin:3px 0px 0 0;-webkit-filter: grayscale(100%);-ms-filter: grayscale(100%);-0-filter: grayscale(100%);filter: grayscale(100%);}
+#left_menu .global_btn li:hover img {-webkit-filter: grayscale(0%);-ms-filter: grayscale(0%);-o-filter: grayscale(0%);filter: none;}
+#left_menu .global_btn li {display:inline-block;line-height:15px;font-size:12px;width:18px;margin:0 7px 0 0;}
+#left_menu .global_btn li:last-child {margin-right:0;}
+#left_menu .global_btn span {display:none;}
+
+/*좌측 2뎁스 하위 카테고리메뉴*/
+#left_menu .category { margin:0px auto;padding: 10px 0 20px 5px;}
+#left_menu .category ul { z-index:1; font-size:0; line-height:0;}
+#left_menu .category li { position:relative; z-index:12;   letter-spacing:1px;  line-height:16px; font-size:12px; font-weight:400;  width:120px;   }
+#left_menu .category li a {  color:#000; padding:0px; letter-spacing:0.5px;}
+#left_menu .category li a:hover {color:#777;}
+#left_menu .category li.on > a {  }
+
+/*좌측 3뎁스 팝업 카테고리메뉴*/
+#left_menu li .sub-category { position:absolute; top:-10px;left:100px; z-index:199999999999999990; width:120px; 
+    overflow:hidden;padding:10px;display:none;}
+#left_menu li .sub-category ul { }
+#left_menu li .sub-category li { padding:0px;width:100%;}
+#left_menu li .sub-category li a {width:100%; letter-spacing:1px;  line-height:18px; font-size:12px;  padding:0px 0px;display:block; color:#000; font-weight:normal; }
+#left_menu li .sub-category li a:hover { color:#777;}

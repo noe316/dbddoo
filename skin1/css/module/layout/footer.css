@@ -1,0 +1,20 @@
+.xans-layout-footer {  width:100%; height:100%;   padding:30px 0px 30px 0px;   letter-spacing:1.5px;  font-weight:normal;  }
+.xans-layout-footer .utilMenu { overflow:hidden; height:42px;  line-height:43px; *zoom:1; }
+.xans-layout-footer .utilMenu li { display:inline-block;  padding:0 5px 0 5px;  }
+.xans-layout-footer .utilMenu li.home { padding-left:0; background:none; }
+.xans-layout-footer .utilMenu li a { color:#000; font-size:10px; }
+.xans-layout-footer .utilMenu li a:hover { text-decoration:none; color:#999;   }
+
+.xans-layout-footer .address { padding:13px 0 0; color:#000; line-height:15px;  font-size:10px; }
+.xans-layout-footer .address span { padding:0 15px 0 0; }
+.xans-layout-footer .address span a { color:#000; }
+
+.xans-layout-footer .copyright { position:absolute; left:204px; bottom:0; height:32px; color:#000; font-size:10px; line-height:32px; }
+.xans-layout-footer .pageTop { position:absolute; right:0; top:10px; }
+.xans-layout-footer .hosting { position:absolute; right:0; top:77px; }
+
+.xans-layout-footer .snsMenu { overflow:hidden; *zoom:1; }
+.xans-layout-footer .snsMenu li { display:inline-block;  padding:0 2px 0 2px;  }
+.xans-layout-footer .snsMenu li img { max-height:15px;  }
+.xans-layout-footer .snsMenu li a { color:#000; font-size:11px; }
+.xans-layout-footer .snsMenu li a:hover { text-decoration:none; color:#999;   }

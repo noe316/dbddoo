@@ -1,0 +1,132 @@
+<script src="/web/upload/new/mosen/menu05/src/jquery.cookie.js"></script>
+<script type="text/javascript" src="/web/upload/new/mosen/menu05/src/jquery.navgoco.js"></script>
+ <!--@css(/zen/css/sidelayout.css)-->
+
+<siv id="left_menu" class="nav accordion">
+    
+    
+        
+    <div class="topArea">
+        <h1 module="Layout_LogoTop">
+            <!--@css(/css/module/layout/logotop.css)-->
+            <a href="/index.html"><img src="https://baboinjune.cafe24.com/web/upload/new/pagelogo.png"></a>
+        </h1>
+    </div>
+    
+    
+<!--스토어메뉴-->
+<li><a href="#"  class="h2" >SHOP</a>
+<ul class="category"  module="Layout_category">
+<!--@js(/js/module/layout/mosen_category.js)-->    
+<li><a href="/product/list.html{$param}" class="h1">{$name_or_img_tag}</a></li>
+<li><a href="/product/list.html{$param}" class="h1">{$name_or_img_tag}</a></li>
+<li><a href="/product/list.html{$param}" class="h1">{$name_or_img_tag}</a></li>
+<li><a href="/product/list.html{$param}" class="h1">{$name_or_img_tag}</a></li>
+</ul>    
+</li>
+   
+<br>   
+
+
+<!--룩북 메뉴 -숨김처리 -->
+<!-- 링크 주소 변경시 :  상품관리 - 분류관리 - 대 분류 만든 다음에 링크 주소 끝에 숫자만 변경을 해주세요 -->
+<!--<li><a href="/product/lookbook_list.html"   class="h2"  >LOOKBOOK</a></li>-->
+<!--켐 페인 메뉴 -숨김처리 -->
+<!-- 링크 주소 변경시 :  상품관리 - 분류관리 - 대 분류 만든 다음에 링크 주소 끝에 숫자만 변경을 해주세요 -->
+<!--<li><a href="/product/campainlist.html?cate_no=23" class="h2" >CAMPAIGN </a></li>-->
+    
+<!--블로그 메뉴-->
+<li> <a href="/customization.html" class="h2" >CUSTOMIZATION</a> </li>  
+<!--블로그 메뉴-->
+<li> <a href="/front/php/b/board_list.php?board_no=8" class="h2" > BLOG </a> </li>  
+   
+<!--브랜드 소개-->
+<li><a href="/shopinfo/company.html" class="h2" >ABOUT US</a></li>     
+
+    
+    
+<!--커뮤니티메뉴-->
+<li><a href="#" class="h2" >COMMUNITY</a>
+<ul class="category"  module="Layout_BoardInfo">
+<!--@import(/zen/layout/menu_community.html)-->       
+</ul>    
+</li>
+          
+ <br>
+  <!--로그인메뉴-->
+   <!--  <li class="login_menu" module="Layout_statelogoff"><a href="/member/login.html">로그인</a> / <a href="/member/join.html">회원가입</a></li>     
+    <li class="login_menu" module="Layout_stateLogon"><a href="{$action_logout}">로그아웃</a> / <a href="/member/modify.html">회원정보수정</a> </li>
+    <li class="login_menu"><a href="/myshop/index.html">마이페이지 </a>  /  <a href="/myshop/order/list.html" >주문조회</a> </li>  -->
+    
+
+    <!--콜센터 메뉴-->
+    <li style="margin-top:20px; " ><a href="#" class="cs_center">CALL INFO </a>
+        <ul class="cs_box">
+            <li> <!--@import(/zen/layout/callinfo.html)--> </li>
+        </ul>    
+    </li>
+
+    <!--은행정보 메뉴-->
+    <li  ><a href="#" class="cs_center">  BANK INFO</a>
+        <ul class="bank_box">
+            <li> <!--@import(/zen/layout/bankinfo.html)--> </li>
+        </ul>
+    </li>    
+    
+        <li style="margin-top:20px; " class="login_menu"> 
+        <!-- 배송 조회 href="링크 주소만 변경해 주세요 "  -->
+        <a href="https://www.cupost.co.kr/postbox/delivery/local.cupost" target="_blank">Delivery</a> 
+    </li> 
+   <li class="login_menu"> 
+        <!-- 배송 조회 href="링크 주소만 변경해 주세요 "  -->
+        <a href="/link/bookmark.html" class="first" target="_blank" onclick="winPop(this.href); return false;">BOOKMARK </a>
+    </li> 
+    
+    <!--글로벌메뉴 (멀티쇼핑몰적용시 자동 온/오프됨)-->
+    <!-- <li module="Layout_multishopListitem" class="openx"><a href="#" class="cs_center"><i class="fa fa-angle-right" aria-hidden="true"></i> FAMILY SET</a>
+        <ul class="global_btn">
+            <li class="{$selected_class}"><a href="http://{$shop_domain}/"  target="_black" ><img src="http://img.cafe24.com/img/common/global/{$language}_32x24.png" alt="" class="ease"  /><span class="name">{$locale_language}</span></a></li>
+            <li class="{$selected_class}"><a href="http://{$shop_domain}/" target="_black" ><img src="http://img.cafe24.com/img/common/global/{$language}_32x24.png" alt="" class="ease"  /><span class="name">{$locale_language}</span></a></li>
+        </ul>
+    </li> -->
+
+
+    
+   <!--하단메뉴-->    
+<div id="accordionbottom"  >
+<!-- 인스타 그램 페이스북 배송 조회 아레 소스 중  href="원하는 링크 주소를 추가 해주세요"    -->
+    <li><a target="_blank"  href="https://www.instagram.com/dbd.dbd.doo"><img src="/web/upload/logo/logo-ins-bk.svg"></a></li>
+    <li><a target="_blank"  href="https://www.facebook.com/DBD.DBD.DOO"><img src="/web/upload/logo/logo-fb-bk.svg"></a></li>
+    <li><a target="_blank"  href="https://www.youtube.com/channel/UCDKvU47d2-0aE3rG6qHvG2Q"><img src="/web/upload/logo/logo-yt-bk.svg"></a></li>
+    <li><a target="_blank"  href="https://blog.naver.com/shoes_injune"><img src="/web/upload/logo/logo-nv-bk.svg"></a></li>
+<br>
+<!-- <li><a href="/" target="_blank" > Delivery </a></li>  -->
+</div> 
+    
+    
+</ul>
+        
+        
+        
+
+<script type="text/javascript">
+
+	// Initialize navgoco with default options
+	$(".nav").navgoco({
+		caretHtml: '',
+		accordion: true,
+		openClass: 'open',
+        save: true,
+		cookie: {
+			name: 'navgoco',
+			expires: false,
+			path: '/'
+		},
+		slide: {
+			duration: 350,
+			easing: 'easeOutBack'
+		}
+
+	});
+
+</script>

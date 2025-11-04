@@ -1,18 +1,17 @@
-.ticker {
+.ticker{
   // position: fixed;       /* 필요 없으면 relative 로 변경 */
   // left: 0;
   // bottom: 0;    /* 상단 고정이면 bottom: auto; top: 0; */
   width: 100vw;
   overflow: hidden;
-  background: #0b1220;
   color: #fff;
-  line-height: 48px;
+  line-height: 100px;
   white-space: nowrap;
   z-index: 9999;
   /* 호버 시 일시정지 */
   &:hover {
     .ticker__track {
-      // animation-play-state: paused;
+       animation-play-state: paused;
     }
   }
   // mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
@@ -24,7 +23,10 @@
   &__item {
     white-space: nowrap;
     padding-inline: 8px;
-    font-size: 40px;
+    font-size: 100px;
+  }
+  &:not(.speciality){
+    background: #0b1220;
   }
 }
 

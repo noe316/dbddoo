@@ -2,9 +2,9 @@
   "name": "sde_design",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-       "scss": "sass skin1/noe/scss:skin1/noe/css --style=expanded --no-source-map",
+    "scss": "sass skin1/noe/scss:skin1/noe/css --style=expanded --no-source-map",
     "scss:watch": "sass skin1/noe/scss:skin1/noe/css --watch --style=compressed --no-error-css --quiet-deps"
   },
   "keywords": [],

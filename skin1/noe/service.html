@@ -1,166 +1,183 @@
 <!--@layout(/layout/basic/main.html)-->
-
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
     <title>inJUNE Atelier – About &amp; Classes Wireframe</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/index.css" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
-      rel="stylesheet"
-    />
-    <!-- 와이어프레임용 최소 스타일 -->
-    <style>
-      :root {
-        --fg: #1a1a1a;
-        --muted: #6b6b6b;
-        --line: #e6e6e6;
-      }
-      body {
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
-          Arial, sans-serif;
-        color: var(--fg);
-        margin: 0;
-        line-height: 1.6;
-      }
-      .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 24px;
-      }
-      .grid {
-        display: grid;
-        gap: 24px;
-      }
-      .g-2 {
-        grid-template-columns: 1fr 1fr;
-      }
-      .g-3 {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      header.site {
-        position: sticky;
-        top: 0;
-        background: #fff;
-        border-bottom: 1px solid var(--line);
-        z-index: 5;
-      }
-      header.site .inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 14px 24px;
-      }
-      nav a {
-        margin: 0 10px;
-        color: var(--fg);
-        text-decoration: none;
-      }
-      section {
-        padding: 48px 0;
-        border-bottom: 1px solid var(--line);
-      }
-      h1,
-      h2,
-      h3 {
-        margin: 0 0 12px;
-      }
-      h1 {
-        font-size: 32px;
-        line-height: 1.2;
-      }
-      h2 {
-        font-size: 24px;
-      }
-      h3 {
-        font-size: 18px;
-      }
-      p.lead {
-        color: var(--muted);
-      }
-      .card {
-        border: 1px solid var(--line);
-        border-radius: 12px;
-        padding: 18px;
-        background: #fff;
-      }
-      .pill {
-        display: inline-block;
-        padding: 4px 10px;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        font-size: 12px;
-        color: var(--muted);
-      }
-      .btn {
-        display: inline-block;
-        padding: 10px 16px;
-        border-radius: 999px;
-        text-decoration: none;
-        font-weight: 600;
-        border: 1px solid var(--fg);
-        color: #fff;
-        background: var(--fg);
-      }
-      .btn.secondary {
-        background: #fff;
-        color: var(--fg);
-      }
-      .list {
-        margin: 8px 0 0 18px;
-      }
-      .muted {
-        color: var(--muted);
-      }
-      .placeholder {
-        background: #f3f3f3;
-        border: 1px dashed #ccc;
-        border-radius: 12px;
-        min-height: 180px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #999;
-      }
-      .cols {
-        columns: 2;
-        column-gap: 24px;
-      }
-      @media (max-width: 900px) {
-        .g-2,
-        .g-3 {
-          grid-template-columns: 1fr;
-        }
-        .cols {
-          columns: 1;
-        }
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Hahmlet:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Hahmlet:wght@100..900&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
   </head>
-  <body>
+  <body class="hahmlet- view__main">
     <!-- 헤더 -->
     <header class="site">
       <div class="inner">
-        <div><strong>inJUNE</strong> atelier</div>
+        <div class="flip__wrap">
+          <img src="./assets/logo_dbd.svg" class="flip__item" alt="dbd.dbd.doo">
+          <img src="./assets/logo_ij.svg" class="flip__item" alt="shoemaking inJune">
+        </div>
+<!--        <div><strong>inJUNE</strong> atelier</div>-->
         <nav>
           <a href="#about">About</a>
           <a href="#programs">Programs</a>
-          <a href="#repair">Repair Class</a>
+          <a href="#repair">Class</a>
           <a href="#schedule">Schedule</a>
           <a href="#inquiry">Inquiry</a>
         </nav>
       </div>
     </header>
 
-    <div class="ticker archivo-black-regular" id="ticker1" data-speed="60">
-      <div class="ticker__track">
-        <span class="ticker__item">Design as Product. Craft in Practice.</span>
-        <span class="ticker__item">DBD.DBD.DOO</span>
+    <section class="visual__video-bg" style="display: ;">
+      <video src="./assets/main_video.mp4" autoplay loop muted></video>
+      <div class="icker archivo-black-regular txt-effect--border" data-speed="220">
+        <div class="icker__track">
+<!--          <p class="ticker__item">-->
+<!--            DBD DBD DOO * Shoemaking inJune-->
+<!--          </p>-->
+          <p class="ticker__item">
+            DBD<br>
+            DBD<br>
+            DOO<br>
+          </p>
+          <p class="ticker__item">
+            Shoemaking<br>
+            in JUNE<br>
+          </p>
+        </div>
+<!--           <em></em>-->
       </div>
-    </div>
+    </section>
+
+
+
+
+    <section class="product__wrap">
+      <ul class="product__list">
+        <li class="product__item">
+          <a href="#none" class="product__link">
+            <img src="./assets/product/01-1.jpg" class="product__img" alt="[Men] Balmoral Oxford">
+            <img src="./assets/product/01-2.jpg" class="product__img" alt="[Men] Balmoral Oxford">
+            <p>[Men] Balmoral Oxford</p>
+          </a>
+        </li>
+        <li class="product__item">
+          <a href="#none" class="product__link">
+            <img src="./assets/product/02-1.jpg" class="product__img" alt="[Men] Balmoral Oxford">
+            <img src="./assets/product/02-2.jpg" class="product__img" alt="[Men] Balmoral Oxford">
+            <p>[Men] Balmoral Oxford</p>
+          </a>
+        </li>
+        <li class="product__item">
+          <a href="#none" class="product__link">
+            <img src="./assets/product/03-1.jpg" class="product__img" alt="[Men] Balmoral Oxford">
+            <img src="./assets/product/03-2.jpg" class="product__img" alt="[Men] Balmoral Oxford">
+            <p>[Men] Balmoral Oxford</p>
+          </a>
+        </li>
+        <li class="product__item">
+          <a href="#none" class="product__link">
+            <img src="./assets/product/04-1.jpg" class="product__img" alt="[Women] Balmoral full Brougue Oxford">
+            <img src="./assets/product/04-2.jpg" class="product__img" alt="[Women] Balmoral full Brougue Oxford">
+            <p>[Men] Balmoral Oxford</p>
+          </a>
+        </li>
+        <li class="product__item">
+          <a href="#none" class="product__link">
+            <img src="./assets/product/05-1.jpg" class="product__img" alt="[Women] Derby Oxford">
+            <img src="./assets/product/05-2.jpg" class="product__img" alt="[Women] Derby Oxford">
+            <p>[Men] Balmoral Oxford</p>
+          </a>
+        </li>
+        <li class="product__item">
+          <a href="#none" class="product__link">
+            <img src="./assets/product/06-1.jpg" class="product__img" alt="[Women] Classic full Brougue Mary Jane">
+            <img src="./assets/product/06-2.jpg" class="product__img" alt="[Women] Classic full Brougue Mary Jane">
+            <p>[Men] Balmoral Oxford</p>
+          </a>
+        </li>
+        <li class="product__item">
+          <a href="#none" class="product__link">
+            <img src="./assets/product/07-1.jpg" class="product__img" alt="[Women] Classic full Brougue Mary Jane">
+            <img src="./assets/product/07-2.jpg" class="product__img" alt="[Women] Classic full Brougue Mary Jane">
+            <p>[Men] Balmoral Oxford</p>
+          </a>
+        </li>
+        <li class="product__item">
+          <a href="#none" class="product__link">
+            <img src="./assets/product/08-1.jpg" class="product__img" alt="[Men] Suede full Brougue Oxford">
+            <img src="./assets/product/08-2.jpg" class="product__img" alt="[Men] Suede full Brougue Oxford">
+            <p>[Men] Balmoral Oxford</p>
+          </a>
+        </li>
+        <li class="product__item">
+          <a href="#none" class="product__link">
+            <img src="./assets/product/09-1.jpg" class="product__img" alt="[Men] Suede Oxford">
+            <img src="./assets/product/09-2.jpg" class="product__img" alt="[Men] Suede Oxford">
+            <p>[Men] Balmoral Oxford</p>
+          </a>
+        </li>
+        <li class="product__item">
+          <a href="#none" class="product__link">
+            <img src="./assets/product/10-1.jpg" class="product__img" alt="[Men] Balmoral full Brougue Oxford">
+            <img src="./assets/product/10-2.jpg" class="product__img" alt="[Men] Balmoral full Brougue Oxford">
+            <p>[Men] Balmoral Oxford</p>
+          </a>
+        </li>
+        <li class="product__item">
+          <a href="#none" class="product__link">
+            <img src="./assets/product/11-1.jpg" class="product__img" alt="[Men] Suede full Brougue Oxford">
+            <img src="./assets/product/11-2.jpg" class="product__img" alt="[Men] Suede full Brougue Oxford">
+            <p>[Men] Balmoral Oxford</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+<!--    <section class="ticker archivo-black-regular" id="ticker1" data-speed="120">-->
+<!--      <div class="ticker__track">-->
+<!--        <span class="ticker__item">Shoemaking inJune</span>-->
+<!--        <span class="ticker__item">DBD.DBD.DOO</span>-->
+<!--      </div>-->
+<!--    </section>-->
+    <section class="ticker archivo-black-regular" id="" data-speed="120">
+      <div class="ticker__track">
+        <span class="ticker__item">Shoemaker inJUNE *</span>
+        <span class="ticker__item">DBDDBDDOO *</span>
+      </div>
+    </section>
+    <section class="signika-700" style="background: mistyrose;">
+      <ul class="product__list--float">
+        <li class="product__item">
+          <a href="#none" class="product__link">
+            <img src="./assets/product/01-1.png" class="product__img" alt="[Men] Balmoral Oxford">
+            <p class="cl-navy">Balmoral Oxford</p>
+          </a>
+        </li>
+        <li class="product__item">
+          <a href="#none" class="product__link">
+            <img src="./assets/product/03-1.png" class="product__img" alt="[Men] Balmoral Oxford">
+            <p class="cl-lightBrown">Balmoral Oxford</p>
+          </a>
+        </li>
+        <li class="product__item">
+          <a href="#none" class="product__link">
+            <img src="./assets/product/05-1.png" class="product__img" alt="[Men] Balmoral Oxford">
+            <p class="cl-turquoise">Derby Oxford</p>
+          </a>
+        </li>
+        <li class="product__item">
+          <a href="#none" class="product__link">
+            <img src="./assets/product/10-1.png" class="product__img" alt="[Men] Suede full Brougue Oxford">
+            <p class="cl-green">Balmoral full Brougue</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
 
     <!-- 히어로/인트로 -->
     <section id="intro">
@@ -180,6 +197,99 @@
         <div class="placeholder">히어로 이미지/영상 자리</div>
       </div>
     </section>
+
+
+
+    <section class="faq__wrap">
+      <h2><strong>FAQ</strong> </h2>
+      <ul class="faq__list">
+        <li data-aos="fade-up" data-aos-offset="-400" data-aos-once="true" class="aos-init aos-animate">
+          <div class="f__list">
+            <p>제작 기간은 얼마나 걸리나요?</p>
+            <span>주문제작</span>
+          </div>
+          <div class="a__list">
+            <div class="a__more">
+              <span>알아보기</span>
+            </div>
+            <div class="a__txt">
+              <p>
+                일반적으로 제작 기간은 2~4주 소요됩니다. 주문 시기와 디자인 난이도에 따라 변동될 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li data-aos="fade-up" data-aos-offset="-400" data-aos-once="true" class="aos-init aos-animate">
+          <div class="f__list">
+            <p>디자인 커스텀도 가능한가요?</p>
+            <span>커스텀</span>
+          </div>
+          <div class="a__list">
+            <div class="a__more">
+              <span>알아보기</span>
+            </div>
+            <div class="a__txt">
+              <p>
+                네. 기본 디자인을 바탕으로 가죽 색상, 굽 높이, 디테일 변경 등 커스텀이 가능합니다. 완전한 신규 디자인은 별도 상담이 필요합니다.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li data-aos="fade-up" data-aos-offset="-400" data-aos-once="true" class="aos-init aos-animate">
+          <div class="f__list">
+            <p>수선도 가능한가요?</p>
+            <span>수선</span>
+          </div>
+          <div class="a__list">
+            <div class="a__more">
+              <span>알아보기</span>
+            </div>
+            <div class="a__txt">
+              <p>
+                저희 공방에서 제작한 신발뿐 아니라 타 브랜드의 가죽 신발도 밑창 교체, 굽 보강, 가죽 복원 등 수선 가능합니다.
+            </div>
+          </div>
+        </li>
+        <li data-aos="fade-up" data-aos-offset="-400" data-aos-once="true" class="aos-init aos-animate">
+          <div class="f__list">
+            <p>결제는 어떻게 하나요?</p>
+            <span>결제</span>
+          </div>
+          <div class="a__list">
+            <div class="a__more">
+              <span>알아보기</span>
+            </div>
+            <div class="a__txt">
+              <p>
+                방문 및 온라인 결제 모두 가능합니다. 주문 제작의 경우 선결제 100% 또는 일부 예약금이 필요합니다.
+
+              </p>
+            </div>
+          </div>
+        </li>
+        <li data-aos="fade-up" data-aos-offset="-400" data-aos-once="true" class="aos-init aos-animate">
+          <div class="f__list">
+            <p>방문 상담은 예약해야 하나요?</p>
+            <span>일반</span>
+          </div>
+          <div class="a__list">
+            <div class="a__more">
+              <span>알아보기</span>
+            </div>
+            <div class="a__txt">
+              <p>
+                서울 마포구 희우정로3길 6 지층<br>
+                0507-1319-9137<br>
+                https://open.kakao.com/o/scKw0aWb <br>
+                - 부재중일수 있으니 오시기전에 방문 약속을 잡아주세요
+              </p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
 
     <!-- About -->
     <section id="about">

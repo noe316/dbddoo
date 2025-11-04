@@ -1,0 +1,37 @@
+// 상단 로고 플립 애니메이션
+.flip__wrap {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  //padding: 1em;
+  perspective: 600px; /* 입체감 위해 */
+}
+.flip__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  animation: FLIP 3s infinite;
+  &:first-child {
+    animation-delay: 0s;
+    z-index: 2;
+  }
+  &:last-child {
+    animation-delay: 1.5s; /* 반주기만큼 지연해서 교차 */
+    opacity: 0;
+    z-index: 1;
+    animation-fill-mode: forwards;
+  }
+}
+
+// 애니메이션 중 교차 처리를 위해 keyframe 확장
+@keyframes FLIP {
+  0%   { transform: rotateY(0deg);   opacity: 1; }
+  45%  { transform: rotateY(180deg); opacity: 0; }
+  50%  { transform: rotateY(180deg); opacity: 0; }
+  55%  { transform: rotateY(180deg); opacity: 1; }
+  100% { transform: rotateY(360deg); opacity: 1; }
+}

@@ -1,0 +1,125 @@
+.faq__wrap {
+  width: 100%;
+  background: #fff;
+  padding: 120px 0;
+  h2 {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    // color: #CFCFFF;
+  }
+}
+.faq__list {
+  width: 70%;
+  margin: 0 auto;
+
+  li {
+    cursor: help;
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #555;
+    &:last-child {
+      border-bottom: none;
+    }
+    // Hover effect
+    &:hover {
+      .f__list p {
+        margin-left: 3%;
+        transition: 0.4s;
+        color: #ccc;
+      }
+
+      .a__more span {
+        opacity: 0;
+        right: 0;
+        position: absolute;
+        transform: translateX(60px);
+        transition: 0.4s;
+      }
+
+      .a__txt {
+        right: 0;
+        opacity: 1;
+        transition: 0.4s;
+      }
+    }
+
+  }
+}
+.f__list {
+  width: 60%;
+  p {
+    font-size: 42px;
+    transition: 0.2s;
+    line-height: 1.2em;
+  }
+
+  span {
+    color: #ccc;
+    letter-spacing: 0.1rem;
+  }
+}
+.a__list {
+  width: 40%;
+  position: relative;
+  span::after {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background: #555;
+    position: absolute;
+    top: 50%;
+  }
+}
+.a__txt {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  right: -10%;
+  transform: translateY(-50%);
+  opacity: 0;
+  padding: 24px 32px;
+  border-radius: 22px;
+  background: rgb(8, 127, 255);
+  color: #fff;
+  transition: transform 1s cubic-bezier(0.16, 1.08, 0.38, 0.98) 0s;
+  word-break: auto-phrase;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 20px;
+    right: -7px;
+    border-bottom-left-radius: 16px 14px;
+    transform: translate(0px, -2px);
+    border-right: 20px solid rgb(8, 127, 255);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 20px;
+    right: -56px;
+    width: 26px;
+    border-bottom-left-radius: 10px;
+    transform: translate(-30px, -2px);
+    background: #fff;
+    border-top: solid #fff;
+  }
+}
+.a__more {
+  span {
+    font-size: 13px;
+    letter-spacing: 0.1rem;
+    position: relative;
+    padding-right: 30px;
+    opacity: 1;
+    transition: 0.2s;
+    display: block;
+    text-align: right;
+  }
+}

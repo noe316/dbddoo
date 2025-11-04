@@ -90,8 +90,8 @@ function rollingText(el) {
     }
   }
 
-  el.addEventListener('mouseenter', onEnter);
-  el.addEventListener('mouseleave', onLeave);
+  // el.addEventListener('mouseenter', onEnter);
+  // el.addEventListener('mouseleave', onLeave);
   window.addEventListener('resize', onResize);
   mql.addEventListener?.('change', onPRM);
 

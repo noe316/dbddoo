@@ -13,7 +13,8 @@
   "description": "",
   "devDependencies": {
     "sass": "^1.93.3"
+  },
+  "dependencies": {
+    "scss": "^0.2.4"
   }
-  
 }
-

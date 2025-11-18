@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>inJUNE Customizer – Demo (SVG + Multiply)</title>
+  <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Hahmlet:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Hahmlet:wght@100..900&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./css/index.css" />
+</head>
+  <style>
+    :root{
+      /* 초기색(원하면 여기서 바꿔 시작) */
+      --toe-color:#F5F5F5;
+      --wing-color:#F5F5F5;
+      --quarter-color:#F5F5F5;
+      --eyestay-color:#F5F5F5;
+      --heel-color:#F5F5F5;
+      --welt-color:#C28B48;
+      --laces-color:#F5F5F5;
+      --outsole-color:#C28B48;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font:14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Noto Sans KR, sans-serif;background:#f6f7f9;color:#111}
+    .wrap{max-width:960px;margin:24px auto;padding:16px}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:16px}
+    @media (max-width:840px){.grid{grid-template-columns:1fr}}
+    .stage{
+      position:relative;background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.06);
+      padding:16px;display:flex;align-items:center;justify-content:center;min-height:420px
+    }
+    svg{width:min(560px,100%);height:auto;display:block}
+    .layer{position:absolute;inset:16px;pointer-events:none}
+    .shade{mix-blend-mode:multiply;opacity:.9}
+    .lines{opacity:.6}
+    .controls{
+      background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.06);padding:12px
+    }
+    .controls h3{margin:6px 6px 8px;font-size:13px;color:#333}
+    .parts{
+      display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:12px
+    }
+    .parts button{
+      width:100%;padding:8px 10px;border-radius:10px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;
+    }
+    .parts button[aria-current="true"]{border-color:#3b82f6;box-shadow:0 0 0 2px rgba(59,130,246,.25)}
+    .swatches{display:grid;grid-template-columns:repeat(8,28px);gap:8px;justify-content:flex-start;padding:6px}
+    .swatches button{
+      width:28px;height:28px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.15);
+      cursor:pointer
+    }
+    .swatches button[data-active="true"]{outline:3px solid #111}
+    .bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 6px}
+    .pill{font-size:12px;padding:4px 8px;background:#f1f5f9;border-radius:999px}
+    .muted{color:#6b7280}
+    .hint{font-size:12px;color:#6b7280;margin:6px}
+  </style>
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <h1>
+      <a href="/dbddoo/skin1/noe/service.html">
+        <span class="blind">DBD.DBD.DOO X Shoemaking inJune</span>
+        <div class="flip__wrap">
+          <img src="./assets/logo_dbd.svg" class="flip__item" alt="dbd.dbd.doo">
+          <img src="./assets/logo_ij.svg" class="flip__item" alt="shoemaking inJune">
+        </div>
+      </a>
+    </h1>
+    <!--        <div><strong>inJUNE</strong> atelier</div>-->
+    <nav>
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#repair">Class</a>
+      <a href="/">Class</a>
+      <a href="/dbddoo/skin1/noe/dummy.html">Custom</a>
+      <a href="#inquiry">Inquiry</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="grid">
+    <!-- ===== PREVIEW ===== -->
+    <section class="stage" id="stage">
+      <!-- 1) 컬러 벡터 레이어 -->
+      <svg viewBox="0 0 1000 1000" aria-label="custom shoe" id="shoe">
+        <!-- 간단화된 탑뷰: 실제 제작 시 Path를 정확히 교체 -->
+        <!-- 토캡 -->
+        <path id="toe" d="M160 680 C 160 560, 380 520, 500 520 C 620 520, 840 560, 840 680 C 840 780, 720 840, 500 840 C 280 840, 160 780, 160 680 Z"
+              fill="var(--toe-color)"/>
+        <!-- 윙팁 -->
+        <path id="wing" d="M220 610 C 340 560, 660 560, 780 610 L 780 650 C 660 600, 340 600, 220 650 Z"
+              fill="var(--wing-color)"/>
+        <!-- 쿼터(좌우 측면) -->
+        <path id="quarter" d="M220 440 L 220 650 C 340 600, 660 600, 780 650 L 780 440 Z"
+              fill="var(--quarter-color)"/>
+        <!-- 아이스테이(끈 구멍 가죽) -->
+        <path id="eyestay" d="M350 420 L 650 420 L 650 520 Q 500 495 350 520 Z" fill="var(--eyestay-color)"/>
+        <!-- 힐카운터 -->
+        <path id="heel" d="M220 440 Q 500 360 780 440 L 780 470 Q 500 410 220 470 Z" fill="var(--heel-color)"/>
+        <!-- 웰트 -->
+        <path id="welt" d="M150 700 Q 500 580 850 700 L 850 740 Q 500 620 150 740 Z" fill="var(--welt-color)"/>
+        <!-- 레이스(끈) -->
+        <g id="laces" fill="var(--laces-color)">
+          <rect x="380" y="470" width="240" height="12" rx="6"/>
+          <rect x="380" y="490" width="240" height="12" rx="6"/>
+          <rect x="380" y="510" width="240" height="12" rx="6"/>
+        </g>
+        <!-- 아웃솔 -->
+        <path id="outsole" d="M130 740 Q 500 620 870 740 L 860 770 Q 500 650 140 770 Z" fill="var(--outsole-color)"/>
+      </svg>
+
+      <!-- 2) 선/펀칭(선택) -->
+      <img class="layer lines" src="shoe_lines.png" alt="" onerror="this.style.display='none'"/>
+      <!-- 3) 음영 텍스처 -->
+      <img class="layer shade" src="shoe_shading.png" alt="" onerror="this.style.display='none'"/>
+    </section>
+
+    <!-- ===== CONTROLS ===== -->
+    <aside class="controls">
+      <div class="bar">
+        <span class="pill">선택 파트: <b id="currentPart">toe</b></span>
+        <span class="pill muted">클릭: 파트 선택 → 아래 팔레트 클릭으로 색 적용</span>
+      </div>
+
+      <h3>1) 파트 선택</h3>
+      <div class="parts" id="partList" role="listbox" aria-label="parts">
+        <!-- JS에서 자동 생성 -->
+      </div>
+
+      <h3>2) 컬러 팔레트 (8종)</h3>
+      <div class="swatches" id="swatches" aria-label="palette">
+        <!-- JS에서 자동 생성 -->
+      </div>
+
+      <div class="hint">Tip: 파트를 직접 클릭해도 선택돼.</div>
+    </aside>
+  </div>
+</div>
+
+<script>
+    /** ==== 구성 데이터 ==== */
+    const PARTS = [
+        {id:'toe', label:'토캡'},
+        {id:'wing', label:'윙팁'},
+        {id:'quarter', label:'쿼터'},
+        {id:'eyestay', label:'아이스테이'},
+        {id:'heel', label:'힐'},
+        {id:'welt', label:'웰트/스티치'},
+        {id:'laces', label:'슈레이스'},
+        {id:'outsole', label:'아웃솔'},
+    ];
+
+    const PALETTE = [
+        {id:'blk', hex:'#1B1B1B', name:'Black'},
+        {id:'wht', hex:'#F5F5F5', name:'White'},
+        {id:'tan', hex:'#C28B48', name:'Tan'},
+        {id:'brn', hex:'#6B3E27', name:'Brown'},
+        {id:'nav', hex:'#24364C', name:'Navy'},
+        {id:'oxb', hex:'#5B1E2E', name:'Oxblood'},
+        {id:'grn', hex:'#2E4A3B', name:'Forest'},
+        {id:'gry', hex:'#9AA0A6', name:'Gray'},
+    ];
+
+    // 초기 상태(원하면 서버 기본값으로 대체)
+    const state = {
+        toe:'wht', wing:'wht', quarter:'wht', eyestay:'wht',
+        heel:'wht', welt:'tan', laces:'wht', outsole:'tan'
+    };
+
+    // DOM
+    const stage = document.getElementById('stage');
+    const shoe = document.getElementById('shoe');
+    const currentPartEl = document.getElementById('currentPart');
+    const partList = document.getElementById('partList');
+    const swatches = document.getElementById('swatches');
+
+    let currentPart = 'toe';
+
+    /** ==== 렌더: 파트 버튼 ==== */
+    function renderPartButtons(){
+        partList.innerHTML = '';
+        PARTS.forEach(p=>{
+            const btn = document.createElement('button');
+            btn.textContent = p.label;
+            btn.dataset.part = p.id;
+            btn.setAttribute('aria-current', p.id===currentPart ? 'true':'false');
+            btn.onclick = ()=>{
+                currentPart = p.id;
+                currentPartEl.textContent = currentPart;
+                document.querySelectorAll('.parts button').forEach(b=>b.setAttribute('aria-current','false'));
+                btn.setAttribute('aria-current','true');
+                // 팔레트 선택 표시 갱신
+                renderSwatches();
+                highlightPart(p.id);
+            };
+            partList.appendChild(btn);
+        });
+    }
+
+    /** ==== 렌더: 팔레트 ==== */
+    function renderSwatches(){
+        swatches.innerHTML = '';
+        PALETTE.forEach(c=>{
+            const s = document.createElement('button');
+            s.title = `${c.name} (${c.hex})`;
+            s.style.background = c.hex;
+            const active = (state[currentPart]===c.id);
+            s.dataset.active = active ? 'true':'false';
+            s.onclick = ()=>applyColor(currentPart, c.id);
+            swatches.appendChild(s);
+        });
+    }
+
+    /** ==== 색 적용 (CSS 변수 업데이트) ==== */
+    function applyColor(part, colorId){
+        state[part] = colorId;
+        const hex = PALETTE.find(x=>x.id===colorId).hex;
+        document.documentElement.style.setProperty(`--${part}-color`, hex);
+        // 팔레트 활성 표시 갱신
+        renderSwatches();
+    }
+
+    /** ==== 파트 클릭으로 선택 ==== */
+    shoe.addEventListener('click', (e)=>{
+        const target = e.target.closest('[id]');
+        if(!target) return;
+        const id = target.id;
+        const known = PARTS.some(p=>p.id===id);
+        if(!known) return;
+        currentPart = id;
+        currentPartEl.textContent = id;
+        renderPartButtons();
+        renderSwatches();
+        highlightPart(id);
+    });
+
+    /** ==== 선택 파트 하이라이트 ==== */
+    let lastStroke = null;
+    function highlightPart(id){
+        if(lastStroke){ lastStroke.style.stroke = ''; lastStroke.style.strokeWidth = '';}
+        const el = document.getElementById(id);
+        if(!el) return;
+        el.style.stroke = '#3b82f6';
+        el.style.strokeWidth = '3';
+        lastStroke = el;
+        setTimeout(()=>{ // 1.2초 후 강조선 제거(잔상 방지)
+            if(lastStroke===el){ el.style.stroke=''; el.style.strokeWidth=''; }
+        }, 1200);
+    }
+
+    // 초기 렌더
+    renderPartButtons();
+    renderSwatches();
+
+    // 초기 CSS 변수 세팅
+    Object.entries(state).forEach(([part,colorId])=>{
+        const hex = PALETTE.find(x=>x.id===colorId).hex;
+        document.documentElement.style.setProperty(`--${part}-color`, hex);
+    });
+
+</script>
+</body>
+</html>

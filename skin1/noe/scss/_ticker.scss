@@ -2,7 +2,8 @@
   // position: fixed;       /* 필요 없으면 relative 로 변경 */
   // left: 0;
   // bottom: 0;    /* 상단 고정이면 bottom: auto; top: 0; */
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
   overflow: hidden;
   color: #fff;
   line-height: 100px;
@@ -18,9 +19,11 @@
   &__track {
     display: flex;
     gap: 32px; /* JS에서 이 gap 값을 읽어 길이 계산 */
+    white-space: nowrap;
     will-change: transform; /* GPU 힌트 */
   }
   &__item {
+    flex: 0 0 auto;
     white-space: nowrap;
     padding-inline: 8px;
     font-size: 100px;

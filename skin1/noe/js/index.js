@@ -12,18 +12,29 @@ function rollingText(el) {
   const speed = Number(el.dataset.speed || 60); // px/s
   let gapPx = parseFloat(getComputedStyle(track).gap || '0');
 
-  // ===== 컨테이너 길이에 맞게 복제 =====
   function fillTrack() {
     track.innerHTML = '';
+
+    // 1) 기본 세트 한 번 채우고 폭 측정
     baseItems.forEach(n => track.appendChild(n.cloneNode(true)));
 
-    const containerW = el.clientWidth;
-    while (track.scrollWidth < containerW * 2) {
+    // 컨테이너 폭은 "부모 레이아웃 기준"으로 한 번만 사용
+    const containerW = el.clientWidth || window.innerWidth;
+    const baseWidth = track.scrollWidth;
+
+    // baseWidth가 0이면(숨겨진 상태 등) 최소 1세트만 유지
+    if (baseWidth === 0) return;
+
+    // 2) "컨테이너의 2배" 이상이 되도록 필요한 횟수만큼 반복
+    const targetWidth = containerW * 2;
+    const repeat = Math.max(1, Math.ceil(targetWidth / baseWidth));
+
+    for (let i = 1; i < repeat; i++) {
       baseItems.forEach(n => track.appendChild(n.cloneNode(true)));
     }
   }
 
-  // ===== 루프 애니메이션 =====
+  // 나머지 loop / pause / resume / rebuild 동일, fillTrack만 교체
   let x = 0, running = true, last = performance.now(), rafId = null;
 
   function widthWithGap(node) {
@@ -50,7 +61,6 @@ function rollingText(el) {
     rafId = requestAnimationFrame(loop);
   }
 
-  // ===== 컨트롤 =====
   function pause() {
     running = false;
     if (rafId) cancelAnimationFrame(rafId);
@@ -71,9 +81,6 @@ function rollingText(el) {
     if (wasRunning && !mql.matches) resume();
   }
 
-  // ===== 이벤트 =====
-  function onEnter() { pause(); }
-  function onLeave() { if (!mql.matches) resume(); }
   let resizeTimer;
   function onResize() {
     clearTimeout(resizeTimer);
@@ -90,12 +97,9 @@ function rollingText(el) {
     }
   }
 
-  // el.addEventListener('mouseenter', onEnter);
-  // el.addEventListener('mouseleave', onLeave);
   window.addEventListener('resize', onResize);
   mql.addEventListener?.('change', onPRM);
 
-  // ===== 초기 실행 =====
   fillTrack();
   if (!mql.matches) requestAnimationFrame(loop);
   onPRM();

@@ -4,6 +4,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "build": "sass skin1/noe/scss:skin1/noe/css --style=compressed --no-error-css --quiet-deps",
+    "deploy": "npm run build && git add . && git commit -m \"deploy\" && git push origin main",
     "scss": "sass skin1/noe/scss:skin1/noe/css --style=expanded --no-source-map",
     "scss:watch": "sass skin1/noe/scss:skin1/noe/css --watch --style=compressed --no-error-css --quiet-deps"
   },
